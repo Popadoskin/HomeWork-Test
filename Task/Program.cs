@@ -21,11 +21,20 @@
     return newArray;
 }
 
-
-
-
-
+void PrintArray(string[] arrayToPrint)
+{
+    Console.Write("[ ");
+    for (int i = 0; i < arrayToPrint.Length; i++)
+    {
+        Console.Write($"\"{arrayToPrint[i]}\" ");
+        if(i < arrayToPrint.Length - 1)
+        {
+            Console.Write(", ");
+        }
+    }
+    Console.WriteLine("]");
+}
 
 string[] array = { "1234", "ask", "sun", "hello", "world", "sea", "12" };
-string[] newArray = CreateArray();
+string[] newArray = CreateArray(array, 3);
 PrintArray(newArray);
